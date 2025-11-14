@@ -1,19 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Request Info</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+      rel="stylesheet"
+    />
     <style>
+      * {
+        font-family: "Roboto Mono", monospace;
+        margin: 0;
+        padding: 0;
+      }
 
+      body {
+        height: 100vh;
+      }
 
+      p {
+        margin: 0.5rem 0;
+        word-wrap: break-word;
+      }
+
+      span {
+        background-color: blue;
+        color: white;
+        border-radius: 0px 10px 10px 0px;
+        padding: 0 5px;
+        margin-right: 5px;
+        font-weight: 600;
+      }
+
+      .data {
+        max-width: 50%;
+      }
+
+      .main-container {
+        display: flex;
+        height: 100%;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+      }
     </style>
   </head>
   <body>
-
-    <% for (const i in data) { %>
+    <div class="main-container">
+      <div class="data">
+        <h1>Request Info</h1>
+        <% for (const i in data) { %>
         <p><span><%= i %>:</span><%= data[i] %></p>
-    <% } %>
+        <% } %>
+      </div>
+    </div>
   </body>
 </html>
