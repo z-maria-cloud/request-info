@@ -1,12 +1,12 @@
-import 'dotenv/config'
+import "dotenv/config";
 
-import express from 'express';
+import express from "express";
 const app = express();
 const port = process.env.PROJECT_PORT;
 const appName = process.env.PROJECT_NAME;
 
-app.get('/', (req, res) => {
-    res.render("index.ejs", {data: req.headers});
+app.get("/", (req, res) => {
+  res.render("index.ejs", { data: req.headers });
 });
 
 app.listen(port, () => {
