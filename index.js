@@ -6,7 +6,7 @@ const port = process.env.PROJECT_PORT;
 const appName = process.env.PROJECT_NAME;
 
 app.get('/', (req, res) => {
-    res.send(req.headers)
+    res.render("index.ejs", {data: req.headers});
 });
 
 app.listen(port, () => {
