@@ -1,10 +1,6 @@
 # Request Info
 
-I use this tool to inspect all the headers contained in an HTTP request.
-
-## Usage
-
-Visiting the project's root will neatly display all the headers.
+Visiting the project's root will neatly display all the request headers.
 
 Since the project is responsive, it will also work on phones.
 
