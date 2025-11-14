@@ -29,11 +29,21 @@
         word-wrap: break-word;
       }
 
-      span {
-        background-color: blue;
+      h1 {
+        width: fit-content;
         color: white;
-        border-radius: 0px 10px 10px 0px;
-        padding: 0 5px;
+      }
+
+      .bg-blue {
+        background-color: blue;
+      }
+
+      .bg-green {
+        background-color: green;
+      }
+
+      span {
+        color: white;
         margin-right: 5px;
         font-weight: 600;
       }
@@ -49,14 +59,25 @@
         align-content: center;
         justify-content: center;
       }
+
+      .border {
+        border-radius: 0px 10px 10px 0px;
+        padding: 0 5px;
+      }
+
+      @media (max-width: 600px) {
+        .data {
+          max-width: 90%;
+        }
+      }
     </style>
   </head>
   <body>
     <div class="main-container">
       <div class="data">
-        <h1>Request Info</h1>
+        <h1 class="bg-green border">Request Info</h1>
         <% for (const i in data) { %>
-        <p><span><%= i %>:</span><%= data[i] %></p>
+        <p><span class="bg-blue border"><%= i %>:</span><%= data[i] %></p>
         <% } %>
       </div>
     </div>
